@@ -1,9 +1,7 @@
-﻿# Brindco Quant Desk — Candidate Case Assignment
-## Track: Quantitative Researcher — Pillar III (Systematic Quantamental)
-### Project: "One Paper, One Strategy"
+﻿# Brindco Assignment
 
 **Candidate:** Sambit Ranjan Rout  
-**Affiliation:** Chennai Mathematical Institute (MSc Data Science, 2026 Cohort)  
+**Affiliation:** Chennai Mathematical Institute
 **Selected Paper:** **Novy-Marx, R. (2012). *Is Momentum Really Momentum?*** *Journal of Financial Economics*, 103(3), 429–453.
 
 ---
@@ -23,44 +21,40 @@ This repository contains the complete, reproducible research pipeline translatin
 ## 2. Repository Structure
 
 ```
-brindco_quant_case/
-├── README.md                      # This document (declarations, run instructions, methodology)
-├── requirements.txt               # Pinned exact library versions
-├── config.py                      # Global dates, desk cost stack, tax rates, parameters
-├── run_pipeline.py                # Master single-command executable runner
+brindco_novy_marx_momentum/
+├── README.md                     
+├── requirements.txt            
+├── config.py                     
+├── run_pipeline.py      
 ├── data/
-│   ├── universe_manager.py        # Point-in-time NIFTY 500 universe & survivorship handling
-│   └── fetcher.py                 # Public data ingestion & caching (yfinance parquet)
+│   ├── universe_manager.py   
+│   └── fetcher.py            
 ├── signals/
-│   └── novy_marx_signals.py       # Exact zero-lookahead r_{12,7}, r_{6,2}, r_{12,2}, r_{1,0} formulations
+│   └── novy_marx_signals.py
 ├── portfolio/
-│   └── allocator.py               # Long-only top-30 sizing (EW / IVW) with rank buffering guardrails
+│   └── allocator.py 
 ├── execution/
-│   ├── cost_model.py              # Exact Brindco statutory cost stack + sqrt market impact model
-│   └── tax_engine.py              # Lot-by-lot FIFO Indian Capital Gains Tax engine (STCG 20%, LTCG 12.5%)
+│   ├── cost_model.py        
+│   └── tax_engine.py       
 ├── backtest/
-│   ├── engine.py                  # Isolated Build (2015-23) vs Holdout (2023-26) backtest engine
-│   └── metrics.py                 # Institutional risk/return, CAPM alpha/beta, drawdown analytics
+│   ├── engine.py               
+│   └── metrics.py          
 ├── research/
-│   └── econometric_tests.py       # Fama-MacBeth HAC regressions & Mandatory Section 4.4 Table
-├── memo/
-│   ├── generate_memo.py           # ReportLab PDF compiler enforcing exact 5-page constraint
-│   ├── Brindco_Research_Memo_Novy_Marx.pdf  # Final 5-page submission memo (PDF)
-│   └── Brindco_Research_Memo_Novy_Marx.md   # Final 5-page submission memo (Markdown)
+│   └── econometric_tests.py     
 └── output/
-    ├── summary_build.csv          # Performance summary table (Build Window)
-    ├── summary_holdout.csv        # Performance summary table (Holdout Window)
-    ├── mandatory_arithmetic_table.csv  # Section 4.4 Mandatory Arithmetic Table
-    ├── fig1_build_performance_drawdown.png # Build window equity curve & drawdown
-    ├── fig2_holdout_validation.png         # Holdout out-of-sample validation curve
-    └── fig3_turnover_comparison.png        # Realized monthly turnover comparison
+    ├── summary_build.csv        
+    ├── summary_holdout.csv   
+    ├── mandatory_arithmetic_table.csv  
+    ├── fig1_build_performance_drawdown.png 
+    ├── fig2_holdout_validation.png        
+    └── fig3_turnover_comparison.png      
 ```
 
 ---
 
-## 3. Reproduction Instructions (Clean Checkout)
+## 3. Reproduction Instructions
 
-To reproduce all results, tables, figures, and the 5-page memo from scratch:
+To reproduce all results, tables, and figures from scratch:
 
 ```bash
 # 1. Install dependencies
@@ -68,14 +62,11 @@ pip install -r requirements.txt
 
 # 2. Execute the entire pipeline end-to-end
 python run_pipeline.py
-
-# 3. Compile the final 5-page PDF memo
-python memo/generate_memo.py
 ```
 
 ---
 
-## 4. Mandatory Section 4.4 Arithmetic Table
+## 4. Arithmetic Table
 
 | Metric | Value / Specification | Desk Commentary |
 | :--- | :--- | :--- |
