@@ -44,7 +44,7 @@ brindco_novy_marx_momentum/
 └── output/
     ├── summary_build.csv        
     ├── summary_holdout.csv   
-    ├── mandatory_arithmetic_table.csv  
+    ├── arithmetic_table.csv  
     ├── fig1_build_performance_drawdown.png 
     ├── fig2_holdout_validation.png        
     └── fig3_turnover_comparison.png      
