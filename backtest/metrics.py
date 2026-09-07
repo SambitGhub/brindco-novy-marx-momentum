@@ -1,7 +1,7 @@
 ﻿"""
 Performance and Risk Analytics Module.
 Computes institutional performance metrics, factor regressions (CAPM alpha & beta),
-drawdowns, turnover statistics, and the mandatory Brindco arithmetic table.
+drawdowns, turnover statistics, and the arithmetic table.
 """
 
 import numpy as np
