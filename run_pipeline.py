@@ -1,5 +1,5 @@
 ﻿"""
-Master Pipeline Runner for Brindco Quant Case Assignment: 'One Paper, One Strategy'
+Master Pipeline Runner for Brindco Assignment
 Candidate: Sambit Ranjan Rout (Chennai Mathematical Institute)
 Paper: Novy-Marx, R. (2012) 'Is Momentum Really Momentum?'
 """
