@@ -1,6 +1,6 @@
 ﻿"""
 Brindco Execution Cost Model.
-Implemented the exact desk cost stack for Indian Cash Equities (Delivery & Intraday),
+Implements the exact desk cost stack for Indian Cash Equities (Delivery & Intraday),
 along with a non-linear square-root market impact model for Mid/Small caps.
 """
 
