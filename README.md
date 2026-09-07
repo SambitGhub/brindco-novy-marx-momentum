@@ -85,4 +85,3 @@ python run_pipeline.py
 ## 5. Declarations & Compliance
 
 * **Data Sources (Rule 6.1):** Historical daily quotes sourced from Yahoo Finance NSE archives (`.NS`), adjusted for splits and bonus issues. NIFTY 500 historical reconstitutions mapped from NSE historical index circulars. Survivorship bias mathematically bounded below $\le 0.48\%$ annualized.
-* **Language Models & Assistants (Rule 6.2):** Large language models (Claude / Gemini) were utilized for code structuring, syntax verification, and ReportLab canvas styling. All financial logic, econometric regressions, mathematical formulations, and conclusions were designed and verified by the author.
